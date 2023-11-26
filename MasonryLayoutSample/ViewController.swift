@@ -25,8 +25,17 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.collectionViewLayout = masonryLayout(contentInset: .init(top: 0, leading: 10, bottom: 0, trailing: 10))
+        collectionView.collectionViewLayout = masonryLayout(
+            contentInset: .init(top: 0, leading: 10, bottom: 0, trailing: 10))
         collectionView.dataSource = dataSource
+    }
+    
+    override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        fetchData()
+    }
+    
+    func fetchData() {
         applySnapShot()
     }
     
@@ -173,19 +182,9 @@ extension UILabel {
     }
 }
 
-//struct SwiftUIPreview: UIViewControllerRepresentable {
-//    func makeUIViewController(
-//        context:
-//            UIViewControllerRepresentableContext<SwiftUIPreview>
-//    ) -> ViewController {
-//        ViewController()
-//    }
-//    func updateUIViewController(
-//        _ uiViewController: ViewController,
-//        context: UIViewControllerRepresentableContext<SwiftUIPreview>
-//    ) {}
-//}
-//
-//#Preview {
-//    SwiftUIPreview()
-//}
+#Preview {
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let vc = storyboard.instantiateInitialViewController() as! ViewController
+    vc.loadViewIfNeeded()
+    return vc
+}

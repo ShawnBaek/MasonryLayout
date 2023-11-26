@@ -13,9 +13,10 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAu-bb-2jP">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section Header" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAu-bb-2jP">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="backgroundColor" red="0.090196078430000007" green="0.72941176470000002" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
